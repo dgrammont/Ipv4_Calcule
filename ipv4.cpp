@@ -1,6 +1,11 @@
 #include "ipv4.h"
 #include <math.h>
 
+/**
+ * @brief Ipv4::Ipv4
+ * @param _adresse
+ * @param _cidr
+ */
 Ipv4::Ipv4(const unsigned char * _adresse,const unsigned char _cidr)
 {
     adresse = new unsigned char [4];
@@ -83,6 +88,10 @@ void Ipv4::ObtenirDreniereAdresseReseau( unsigned char *_diffusion, unsigned cha
     _derniere[3] = _derniere[3]-1;
 }
 
+/**
+ * @brief Ipv4::NombreDeMachine
+ * @return
+ */
 int Ipv4::NombreDeMachine()
 {   int save=0;
     double nbMachine;
